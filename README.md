@@ -1,5 +1,4 @@
 # Tools
-Functional Tools That Work
+Functional Standalone Tools That Work
 
-# Standalone
 -Enjoy
