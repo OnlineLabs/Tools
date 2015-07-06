@@ -1,6 +1,6 @@
 @echo off
 color a
-set timestamp=%DATE:~4,2%.%DATE:~7,2%.%DATE:~-4%.%TIME:~0,2%.%TIME:~3,2%
+set timestamp=%DATE:~4,2%.%DATE:~7,2%.%DATE:~-4%
 set profile=%userdomain%^\%computername%^\%username%
 
 echo.
