@@ -1,5 +1,12 @@
 @echo off
 color a
+
+REM ####################
+REM Enter your Ping destination Server
+set ping_destination=server.local
+REM #####################
+
+
 set timestamp=%DATE:~4,2%.%DATE:~7,2%.%DATE:~-4%
 set profile=%userdomain%^\%computername%^\%username%
 
@@ -12,10 +19,10 @@ echo. CLOSE COMMAND PROMPT WHEN FINISHED.
 ECHO. CHECK [C:\%timestamp%_%profile%_uptime.txt] FOR LOGS
 echo.
 
-ping google.com -n 10>C:\%timestamp%_%profile%_uptime.txt
+ping %ping_destination% -n 10>C:\%timestamp%_%profile%_uptime.txt
 
 :loop
-ping google.com -n 10>>C:\%timestamp%_%profile%_uptime.txt
+ping %ping_destination% -n 10>>C:\%timestamp%_%profile%_uptime.txt
 echo ###########################################################>> C:\%timestamp%_%profile%_uptime.txt
 echo ###########################################################>> C:\%timestamp%_%profile%_uptime.txt
 echo #							  #>> C:\%timestamp%_%profile%_uptime.txt
